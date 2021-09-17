@@ -114,6 +114,13 @@ a {
   height: 1.6rem;
 }
 
+.btn--pill {
+  border-radius: 10rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  padding: 5px 2rem;
+}
+
 .avatar {
   position: relative;
   display: inline-block;
@@ -177,8 +184,8 @@ a {
 .avatar.avatar--large:after {
   width: 1rem;
   height: 1rem;
-  bottom: 0px;
-  right: 1px;
+  bottom: 2px;
+  right: 3.5px;
 }
 
 /*==============================
@@ -650,4 +657,49 @@ a {
 
 .settings__avatar .avatar {
   margin: 1rem;
+}
+
+/*==============================
+=>  Profile
+================================*/
+.profile {
+  margin-bottom: 3rem;
+}
+
+.profile__avatar {
+  text-align: center;
+}
+
+.profile__info {
+  text-align: center;
+}
+
+.profile__info h3 {
+  font-size: 2rem;
+  color: var(--color-light);
+  font-weight: 400;
+}
+
+.profile__info p {
+  color: var(--color-main);
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.profile__about {
+  margin-top: 2rem;
+}
+
+.profile__about h3 {
+  text-transform: uppercase;
+  color: var(--color-dark-light);
+  margin-bottom: 0.5rem;
+}
+
+.profile-page .roomList__header {
+  margin-bottom: 1.5rem;
+}
+
+.profile-page .roomList__header h2 {
+  color: var(--color-dark-light);
 }
