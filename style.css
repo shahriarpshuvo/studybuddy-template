@@ -57,6 +57,7 @@ img {
 }
 
 a {
+  display: inline-block;
   color: var(--color-main);
   text-decoration: none;
 }
@@ -71,7 +72,7 @@ a {
 .btn {
   background-color: transparent;
   border: none;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 1rem;
   cursor: pointer;
@@ -79,6 +80,7 @@ a {
   padding: 1rem 2rem;
   border-radius: 5px;
   box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.15);
+  font-weight: 500;
 }
 
 .btn--link {
@@ -89,17 +91,21 @@ a {
 }
 
 .btn--link:hover {
-  border-bottom: 2px solid currentColor;
+  text-decoration: underline;
 }
 
 .btn--main {
   background-color: var(--color-main);
   color: var(--color-dark);
-  font-weight: 500;
 }
 
-.btn--main:hover {
+.btn:hover {
   opacity: 0.9;
+}
+
+.btn--dark {
+  background-color: var(--color-dark-light);
+  color: var(--color-light);
 }
 
 .btn > svg {
@@ -275,6 +281,87 @@ a {
 
 .layout--3 > .container > div:last-child {
   flex-basis: 25%;
+}
+
+/*========== Layout Box ==========*/
+
+.layout__box {
+  width: 90%;
+  max-width: 48rem;
+  min-height: 40rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--color-dark);
+  border-radius: 1rem;
+  box-shadow: 1px 1px 6px 3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.layout__boxHeader {
+  display: flex;
+  padding: 1.5rem;
+  background-color: var(--color-dark-light);
+}
+
+.layout__boxTitle {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.layout__boxTitle h3 {
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--color-light);
+}
+
+.layout__boxTitle svg {
+  width: 1.6rem;
+  height: 1.6rem;
+  fill: var(--color-main);
+}
+
+.layout__body {
+  margin: 3rem;
+}
+
+/*==============================
+=>  Topics
+================================*/
+
+.form {
+}
+
+.form__group {
+  margin-bottom: 2rem;
+}
+
+.form__group label {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.form__group input,
+.form__group textarea {
+  background: transparent;
+  border: 1px solid var(--color-dark-light);
+  padding: 1rem;
+  border-radius: 3px;
+  width: 100%;
+}
+
+.form__group textarea {
+  background: transparent;
+  height: 10rem;
+  resize: none;
+}
+
+.form__action {
+  display: flex;
+  justify-content: flex-end;
+  gap: 3rem;
 }
 
 /*==============================
@@ -483,4 +570,33 @@ a {
   border-radius: 5px;
   margin-top: 1rem;
   margin-left: -4.2rem;
+}
+
+/*==============================
+=>  Create Room
+================================*/
+
+.create-room.layout .layout__box {
+  max-width: 68rem;
+}
+
+/*==============================
+=>  Auth
+================================*/
+
+.auth__tagline {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--color-main);
+  font-weight: 500;
+  font-size: 1.8rem;
+}
+.auth .layout__boxHeader {
+  text-align: center;
+  justify-content: center;
+}
+
+.auth__action {
+  margin-top: 3rem;
+  text-align: center;
 }
