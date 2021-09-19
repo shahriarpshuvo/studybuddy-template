@@ -138,16 +138,6 @@
       </div>
     </main>
 
-    <script>
-      const photoInput = document.querySelector('#avatar');
-      const photoPreview = document.querySelector('#preview-avatar');
-      if (photoInput)
-        photoInput.onchange = () => {
-          const [file] = photoInput.files;
-          if (file) {
-            photoPreview.src = URL.createObjectURL(file);
-          }
-        };
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
