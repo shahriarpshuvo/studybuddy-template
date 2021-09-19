@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <title>StudyBuddy - Find study partners around the world!</title>
+  </head>
+  <body>
+    <header class="header header--loggedIn">
+      <div class="container">
+        <a href="/" class="header__logo">
+          <img src="assets/logo.svg" />
+          <h1>StudyBuddy</h1>
+        </a>
+        <form class="header__search">
+          <label>
+            <svg
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              viewBox="0 0 32 32"
+            >
+              <title>search</title>
+              <path
+                d="M32 30.586l-10.845-10.845c1.771-2.092 2.845-4.791 2.845-7.741 0-6.617-5.383-12-12-12s-12 5.383-12 12c0 6.617 5.383 12 12 12 2.949 0 5.649-1.074 7.741-2.845l10.845 10.845 1.414-1.414zM12 22c-5.514 0-10-4.486-10-10s4.486-10 10-10c5.514 0 10 4.486 10 10s-4.486 10-10 10z"
+              ></path>
+            </svg>
+            <input placeholder="Search for posts" />
+          </label>
+        </form>
+        <nav class="header__menu">
+          <!-- Not Logged In -->
+          <!-- <a href="/login.html">
+            <img src="./assets/avatar.svg" />
+            <p>Account</p>
+          </a> -->
+
+          <!-- Logged In -->
+          <a href="#">
+            <div class="avatar avatar--medium active">
+              <img src="https://randomuser.me/api/portraits/men/37.jpg" />
+            </div>
+            <p>John Doe <span>@john_doe</span></p>
+            <svg
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              viewBox="0 0 32 32"
+            >
+              <title>chevron-down</title>
+              <path d="M16 21l-13-13h-3l16 16 16-16h-3l-13 13z"></path>
+            </svg>
+          </a>
+        </nav>
+      </div>
+    </header>
+    <main class="profile-page layout layout--2">
+      <div class="container">
+        <!-- Room Start -->
+        <div class="room">
+          <div class="room__top">
+            <div class="room__topLeft">
+              <a href="index.html">
+                <svg
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="32"
+                  height="32"
+                  viewBox="0 0 32 32"
+                >
+                  <title>arrow-left</title>
+                  <path
+                    d="M13.723 2.286l-13.723 13.714 13.719 13.714 1.616-1.611-10.96-10.96h27.625v-2.286h-27.625l10.965-10.965-1.616-1.607z"
+                  ></path>
+                </svg>
+              </a>
+              <h3>Study Room</h3>
+            </div>
+            <div class="room__topRight">
+              <svg
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                width="33"
+                height="32"
+                viewBox="0 0 33 32"
+              >
+                <title>ellipsis-vertical</title>
+                <path
+                  d="M28.723 20c-2.206 0-4-1.794-4-4s1.794-4 4-4c2.206 0 4 1.794 4 4s-1.794 4-4 4zM28.723 14c-1.103 0-2 0.897-2 2s0.897 2 2 2c1.103 0 2-0.897 2-2s-0.898-2-2-2z"
+                ></path>
+                <path
+                  d="M16.375 20c-2.206 0-4-1.794-4-4s1.794-4 4-4c2.206 0 4 1.794 4 4s-1.794 4-4 4zM16.375 14c-1.103 0-2 0.897-2 2s0.897 2 2 2c1.103 0 2-0.897 2-2s-0.897-2-2-2z"
+                ></path>
+                <path
+                  d="M4.027 20c-2.206 0-4-1.794-4-4s1.794-4 4-4c2.206 0 4 1.794 4 4s-1.794 4-4 4zM4.027 14c-1.103 0-2 0.897-2 2s0.897 2 2 2c1.103 0 2-0.897 2-2s-0.897-2-2-2z"
+                ></path>
+              </svg>
+            </div>
+          </div>
+          <div class="room__box">
+            <div class="room__header">
+              <div class="room__info">
+                <h3>100 Days of Code Challenge</h3>
+                <span>3 days ago</span>
+              </div>
+              <div class="room__hosted">
+                <p>Hosted By</p>
+                <a href="#" class="room__author">
+                  <div class="avatar avatar--small">
+                    <img src="https://randomuser.me/api/portraits/men/37.jpg" />
+                  </div>
+                  <span>@dennis_ivy</span>
+                </a>
+              </div>
+              <div class="room__details">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, tenetur laudantium?
+                Dicta repellendus rerum consectetur, voluptatem repudiandae eum ea porro cupiditate
+                provident nulla, deserunt, ab ipsum corporis laboriosam deleniti molestias?
+              </div>
+              <span class="room__topics">JavaScript</span>
+            </div>
+            <div class="room__conversation scroll">
+              <h3>Conversation</h3>
+              <div class="thread">
+                <div class="thread__top">
+                  <div class="thread__author">
+                    <a href="#" class="thread__authorInfo">
+                      <div class="avatar avatar--small">
+                        <img src="https://randomuser.me/api/portraits/men/37.jpg" />
+                      </div>
+                      <span>@dennis_ivy</span>
+                    </a>
+                    <span class="thread__date">3 day ago</span>
+                  </div>
+                  <div class="thread__delete">
+                    <svg
+                      version="1.1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 32 32"
+                    >
+                      <title>delete</title>
+                      <path
+                        d="M30 4h-8v-3c0-0.553-0.447-1-1-1h-10c-0.553 0-1 0.447-1 1v3h-8v2h2v24c0 1.104 0.897 2 2 2h20c1.103 0 2-0.896 2-2v-24h2v-2h-0zM12 2h8v2h-8v-2zM26.002 30l-0.002 1v-1h-20v-24h20v24h0.002z"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class="thread__details">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque nobis, deserunt cum
+                  quibusdam aliquam nihil unde et impedit, sequi, modi quos porro iure enim suscipit
+                  itaque earum tenetur praesentium quaerat! Corporis praesentium aspernatur autem
+                  laboriosam natus similique, adipisci nam maxime.
+                </div>
+              </div>
+              <div class="thread">
+                <div class="thread__top">
+                  <div class="thread__author">
+                    <a href="#" class="thread__authorInfo">
+                      <div class="avatar avatar--small">
+                        <img src="https://randomuser.me/api/portraits/men/37.jpg" />
+                      </div>
+                      <span>@dennis_ivy</span>
+                    </a>
+                    <span class="thread__date">3 day ago</span>
+                  </div>
+                  <div class="thread__delete">
+                    <svg
+                      version="1.1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 32 32"
+                    >
+                      <title>delete</title>
+                      <path
+                        d="M30 4h-8v-3c0-0.553-0.447-1-1-1h-10c-0.553 0-1 0.447-1 1v3h-8v2h2v24c0 1.104 0.897 2 2 2h20c1.103 0 2-0.896 2-2v-24h2v-2h-0zM12 2h8v2h-8v-2zM26.002 30l-0.002 1v-1h-20v-24h20v24h0.002z"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class="thread__details">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque nobis, deserunt cum
+                  quibusdam aliquam nihil unde et impedit, sequi, modi quos porro iure enim suscipit
+                  itaque earum tenetur praesentium quaerat! Corporis praesentium aspernatur autem
+                  laboriosam natus similique, adipisci nam maxime.
+                </div>
+              </div>
+              <div class="thread">
+                <div class="thread__top">
+                  <div class="thread__author">
+                    <a href="#" class="thread__authorInfo">
+                      <div class="avatar avatar--small">
+                        <img src="https://randomuser.me/api/portraits/men/37.jpg" />
+                      </div>
+                      <span>@dennis_ivy</span>
+                    </a>
+                    <span class="thread__date">3 day ago</span>
+                  </div>
+                  <div class="thread__delete">
+                    <svg
+                      version="1.1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 32 32"
+                    >
+                      <title>delete</title>
+                      <path
+                        d="M30 4h-8v-3c0-0.553-0.447-1-1-1h-10c-0.553 0-1 0.447-1 1v3h-8v2h2v24c0 1.104 0.897 2 2 2h20c1.103 0 2-0.896 2-2v-24h2v-2h-0zM12 2h8v2h-8v-2zM26.002 30l-0.002 1v-1h-20v-24h20v24h0.002z"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class="thread__details">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque nobis, deserunt cum
+                  quibusdam aliquam nihil unde et impedit, sequi, modi quos porro iure enim suscipit
+                  itaque earum tenetur praesentium quaerat! Corporis praesentium aspernatur autem
+                  laboriosam natus similique, adipisci nam maxime.
+                </div>
+              </div>
+              <div class="thread">
+                <div class="thread__top">
+                  <div class="thread__author">
+                    <a href="#" class="thread__authorInfo">
+                      <div class="avatar avatar--small">
+                        <img src="https://randomuser.me/api/portraits/men/37.jpg" />
+                      </div>
+                      <span>@dennis_ivy</span>
+                    </a>
+                    <span class="thread__date">3 day ago</span>
+                  </div>
+                  <div class="thread__delete">
+                    <svg
+                      version="1.1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 32 32"
+                    >
+                      <title>delete</title>
+                      <path
+                        d="M30 4h-8v-3c0-0.553-0.447-1-1-1h-10c-0.553 0-1 0.447-1 1v3h-8v2h2v24c0 1.104 0.897 2 2 2h20c1.103 0 2-0.896 2-2v-24h2v-2h-0zM12 2h8v2h-8v-2zM26.002 30l-0.002 1v-1h-20v-24h20v24h0.002z"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class="thread__details">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque nobis, deserunt cum
+                  quibusdam aliquam nihil unde et impedit, sequi, modi quos porro iure enim suscipit
+                  itaque earum tenetur praesentium quaerat! Corporis praesentium aspernatur autem
+                  laboriosam natus similique, adipisci nam maxime.
+                </div>
+              </div>
+            </div>
+            <div class="room__message">
+              <form action="#">
+                <textarea name="" placeholder="Write your message here..."></textarea>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- Room End -->
+
+        <!--   Start -->
+        <div class="participants">
+          <h3 class="participants__top">Participants <span>(5.3k Joined)</span></h3>
+          <div class="participants__list scroll">
+            <a href="profile.html" class="participant">
+              <div class="avatar avatar--medium">
+                <img src="https://randomuser.me/api/portraits/men/37.jpg" />
+              </div>
+              <p>
+                Dennis Ivy
+                <span>@dennis_ivy</span>
+              </p>
+            </a>
+            <a href="profile.html" class="participant">
+              <div class="avatar avatar--medium">
+                <img src="https://randomuser.me/api/portraits/men/37.jpg" />
+              </div>
+              <p>
+                Dennis Ivy
+                <span>@dennis_ivy</span>
+              </p>
+            </a>
+            <a href="profile.html" class="participant">
+              <div class="avatar avatar--medium">
+                <img src="https://randomuser.me/api/portraits/men/37.jpg" />
+              </div>
+              <p>
+                Dennis Ivy
+                <span>@dennis_ivy</span>
+              </p>
+            </a>
+            <a href="profile.html" class="participant">
+              <div class="avatar avatar--medium">
+                <img src="https://randomuser.me/api/portraits/men/37.jpg" />
+              </div>
+              <p>
+                Dennis Ivy
+                <span>@dennis_ivy</span>
+              </p>
+            </a>
+            <a href="profile.html" class="participant">
+              <div class="avatar avatar--medium">
+                <img src="https://randomuser.me/api/portraits/men/37.jpg" />
+              </div>
+              <p>
+                Dennis Ivy
+                <span>@dennis_ivy</span>
+              </p>
+            </a>
+            <a href="profile.html" class="participant">
+              <div class="avatar avatar--medium">
+                <img src="https://randomuser.me/api/portraits/men/37.jpg" />
+              </div>
+              <p>
+                Dennis Ivy
+                <span>@dennis_ivy</span>
+              </p>
+            </a>
+            <a href="profile.html" class="participant">
+              <div class="avatar avatar--medium">
+                <img src="https://randomuser.me/api/portraits/men/37.jpg" />
+              </div>
+              <p>
+                Dennis Ivy
+                <span>@dennis_ivy</span>
+              </p>
+            </a>
+            <a href="profile.html" class="participant">
+              <div class="avatar avatar--medium">
+                <img src="https://randomuser.me/api/portraits/men/37.jpg" />
+              </div>
+              <p>
+                Dennis Ivy
+                <span>@dennis_ivy</span>
+              </p>
+            </a>
+            <a href="profile.html" class="participant">
+              <div class="avatar avatar--medium">
+                <img src="https://randomuser.me/api/portraits/men/37.jpg" />
+              </div>
+              <p>
+                Dennis Ivy
+                <span>@dennis_ivy</span>
+              </p>
+            </a>
+            <a href="profile.html" class="participant">
+              <div class="avatar avatar--medium">
+                <img src="https://randomuser.me/api/portraits/men/37.jpg" />
+              </div>
+              <p>
+                Dennis Ivy
+                <span>@dennis_ivy</span>
+              </p>
+            </a>
+            <a href="profile.html" class="participant">
+              <div class="avatar avatar--medium">
+                <img src="https://randomuser.me/api/portraits/men/37.jpg" />
+              </div>
+              <p>
+                Dennis Ivy
+                <span>@dennis_ivy</span>
+              </p>
+            </a>
+            <a href="profile.html" class="participant">
+              <div class="avatar avatar--medium">
+                <img src="https://randomuser.me/api/portraits/men/37.jpg" />
+              </div>
+              <p>
+                Dennis Ivy
+                <span>@dennis_ivy</span>
+              </p>
+            </a>
+            <a href="profile.html" class="participant">
+              <div class="avatar avatar--medium">
+                <img src="https://randomuser.me/api/portraits/men/37.jpg" />
+              </div>
+              <p>
+                Dennis Ivy
+                <span>@dennis_ivy</span>
+              </p>
+            </a>
+            <a href="profile.html" class="participant">
+              <div class="avatar avatar--medium">
+                <img src="https://randomuser.me/api/portraits/men/37.jpg" />
+              </div>
+              <p>
+                Dennis Ivy
+                <span>@dennis_ivy</span>
+              </p>
+            </a>
+            <a href="profile.html" class="participant">
+              <div class="avatar avatar--medium">
+                <img src="https://randomuser.me/api/portraits/men/37.jpg" />
+              </div>
+              <p>
+                Dennis Ivy
+                <span>@dennis_ivy</span>
+              </p>
+            </a>
+            <a href="profile.html" class="participant">
+              <div class="avatar avatar--medium">
+                <img src="https://randomuser.me/api/portraits/men/37.jpg" />
+              </div>
+              <p>
+                Dennis Ivy
+                <span>@dennis_ivy</span>
+              </p>
+            </a>
+            <a href="profile.html" class="participant">
+              <div class="avatar avatar--medium">
+                <img src="https://randomuser.me/api/portraits/men/37.jpg" />
+              </div>
+              <p>
+                Dennis Ivy
+                <span>@dennis_ivy</span>
+              </p>
+            </a>
+          </div>
+        </div>
+        <!--  End -->
+      </div>
+    </main>
+  </body>
+</html>
