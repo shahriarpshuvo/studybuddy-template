@@ -63,3 +63,7 @@ if (photoInput)
       photoPreview.src = URL.createObjectURL(file);
     }
   };
+
+// Scroll to Bottom
+const conversationThread = document.querySelector(".room__box");
+if (conversationThread) conversationThread.scrollTop = conversationThread.scrollHeight;

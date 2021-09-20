@@ -891,7 +891,7 @@ a {
 .room__box {
   padding-left: 2.3rem;
   padding-right: 1.7rem;
-  height: 80vh;
+  height: 80.5vh;
   overflow-y: auto;
   padding-bottom: 0;
 }
@@ -950,11 +950,12 @@ a {
 
 .threads {
   background: var(--color-bg);
-  /* border-radius: 0.7rem; */
+  border-radius: 0.7rem;
   padding: 2rem;
   overflow-y: auto;
   height: 100%;
   margin-top: 25vh;
+  padding-bottom: 0;
 }
 
 .thread {
