@@ -564,7 +564,7 @@ a {
 }
 
 .roomListRoom__actions svg {
-  fill: var(--color-light);
+  fill: var(--color-main);
 
   width: 1.6rem;
   height: 1.6rem;
@@ -809,9 +809,17 @@ a {
 }
 
 .room__topLeft svg {
-  fill: var(--color-main);
+  fill: var(--color-light);
 }
 
+.room__topRight{
+  display: flex;
+  column-gap: 1em;
+}
+
+.room__topRight svg {
+  fill: var(--color-main-light);
+}
 .room__box {
   padding: 1rem 2rem;
   position: relative;
