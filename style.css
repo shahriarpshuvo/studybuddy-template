@@ -824,9 +824,10 @@ a {
 .room,
 .participants {
   background: var(--color-dark);
-  min-height: 87.5vh;
+  max-height: 87.5vh;
   border-radius: 0.7rem;
   overflow: hidden;
+  position: relative;
 }
 
 .room__top,
@@ -875,13 +876,24 @@ a {
   fill: var(--color-main-light);
 }
 
-.room__box {
-  padding: 1rem 2rem;
+.room__header {
+  max-height: 30vh;
+  overflow-y: auto;
+  position: absolute;
+  width: 95%;
+  background: var(--color-dark);
+  z-index: 999;
+  top: 4.4rem;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
 }
 
-.room__header {
-  max-height: 25vh;
+.room__box {
+  padding-left: 2.3rem;
+  padding-right: 1.7rem;
+  height: 80vh;
   overflow-y: auto;
+  padding-bottom: 0;
 }
 
 .room__info {
@@ -927,7 +939,7 @@ a {
 
 .room__conversation {
   margin-top: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
 }
 
 .threads h3 {
@@ -938,16 +950,18 @@ a {
 
 .threads {
   background: var(--color-bg);
-  border-radius: 0.7rem;
+  /* border-radius: 0.7rem; */
   padding: 2rem;
   overflow-y: auto;
-  max-height: 100%;
+  height: 100%;
+  margin-top: 25vh;
 }
 
 .thread {
   border-left: 2px solid var(--color-dark);
   padding-left: 1rem;
   margin: 2rem 0;
+  padding: 2rem;
 }
 
 .thread__top {
@@ -978,9 +992,16 @@ a {
   margin-top: 0.5rem;
 }
 
-/* .room__message {
-  height: 10rem;
-} */
+.room__message {
+  padding: 2rem;
+  position: absolute;
+  z-index: 111;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: transparent;
+}
+
 .room__message > form > input {
   resize: none;
   background-color: var(--color-dark-light);
@@ -989,13 +1010,12 @@ a {
   outline: none;
   border-radius: 0.7rem;
   height: 4.5rem;
-  width: calc(100%);
+  width: 100%;
   margin-top: -1rem;
   padding: 1.2rem;
   font-size: 1.4rem;
   font-weight: 500;
   position: relative;
-  z-index: 111;
 }
 
 .room__message > form > input::placeholder {
