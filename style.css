@@ -425,6 +425,12 @@ a {
 
 .form__group {
   margin-bottom: 2rem;
+  width: 100%;
+}
+
+.form__split {
+  display: flex;
+  gap: 1.5rem;
 }
 
 .form__group label {
@@ -434,7 +440,8 @@ a {
 }
 
 .form__group input,
-.form__group textarea {
+.form__group textarea,
+.form__group select {
   background: transparent;
   border: 1px solid var(--color-dark-light);
   padding: 1rem;
@@ -454,6 +461,17 @@ a {
   background: transparent;
   height: 10rem;
   resize: none;
+}
+
+.form__group select {
+  color: var(--color-gray);
+  font-weight: 400;
+}
+
+.form__group select option {
+  background-color: var(--color-dark-light);
+  color: var(--color-light);
+  padding: 0 10rem;
 }
 
 .form__action {
