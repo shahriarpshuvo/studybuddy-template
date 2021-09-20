@@ -118,7 +118,7 @@ a {
   border-radius: 10rem;
   font-size: 1.4rem;
   font-weight: 700;
-  padding: 8px 2.5rem;
+  padding: 6px 2.5rem;
   color: var(--color-main);
   background: transparent;
   border: 2px solid var(--color-main);
@@ -245,14 +245,17 @@ a {
 }
 
 .mobile-menu {
+  margin-bottom: 3rem;
+}
+
+.mobile-menuItems {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  margin-bottom: 2.4rem;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 519px) {
   .mobile-menu {
     display: none;
   }
@@ -291,7 +294,7 @@ a {
 
 .header__search > label {
   background-color: var(--color-dark-medium);
-  padding: 1rem;
+  padding: 1.3rem 1rem;
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -320,6 +323,12 @@ a {
 
   .header > .container {
     gap: 3rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .header__search {
+    display: none;
   }
 }
 
@@ -367,46 +376,6 @@ a {
 
 .dropdown-button:hover svg {
   fill: var(--color-main);
-}
-
-a.mobile-search {
-  display: none;
-}
-
-.mobile-search svg {
-  fill: var(--color-light-gray);
-  width: 2rem;
-  height: 2rem;
-}
-
-@media screen and (max-width: 600px) {
-  .header__search input {
-    width: 15rem;
-  }
-
-  .header > .container {
-    gap: 2rem;
-  }
-  .header__user p {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .header__search {
-    display: none;
-  }
-
-  a.mobile-search {
-    display: flex;
-    background: var(--color-dark-light);
-    width: 4rem;
-    height: 4rem;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    margin-right: 0.5rem;
-  }
 }
 
 /*==============================
@@ -616,11 +585,11 @@ a.mobile-search {
   letter-spacing: 1px;
 }
 
-.topics a:hover {
+.topics-page a:hover {
   text-decoration: underline;
 }
 
-.topics .topics__list li:not(:last-child) a {
+.topics-page .topics__list li:not(:last-child) a {
   margin: 2rem 0;
   padding-bottom: 1rem;
   text-decoration: none;
@@ -632,9 +601,10 @@ a.mobile-search {
 }
 
 @media screen and (max-width: 500px) {
+  .mobile-menu .header__search,
   .topics-page .header__search {
     display: block;
-    margin-bottom: 3rem;
+    margin-bottom: 2.4rem;
   }
 }
 
