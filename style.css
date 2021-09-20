@@ -616,6 +616,28 @@ a.mobile-search {
   letter-spacing: 1px;
 }
 
+.topics a:hover {
+  text-decoration: underline;
+}
+
+.topics .topics__list li:not(:last-child) a {
+  margin: 2rem 0;
+  padding-bottom: 1rem;
+  text-decoration: none;
+  border-bottom: 1px solid var(--color-dark-medium);
+}
+
+.topics-page .header__search {
+  display: none;
+}
+
+@media screen and (max-width: 500px) {
+  .topics-page .header__search {
+    display: block;
+    margin-bottom: 3rem;
+  }
+}
+
 /*==============================
 =>  Room List
 ================================*/
@@ -908,6 +930,16 @@ a.mobile-search {
   position: relative;
 }
 
+@media screen and (max-width: 900px) {
+  .participants {
+    display: none;
+  }
+
+  .layout--2 > .container > div:first-child {
+    flex-basis: 100%;
+  }
+}
+
 .room__top,
 .participants__top {
   background: var(--color-dark-light);
@@ -966,12 +998,28 @@ a.mobile-search {
   padding-bottom: 1rem;
 }
 
+@media screen and (max-width: 500px) {
+  .room__header {
+    top: 4.3rem;
+  }
+}
+
 .room__box {
   padding-left: 2.3rem;
   padding-right: 1.7rem;
   height: 80.5vh;
   overflow-y: auto;
   padding-bottom: 0;
+}
+
+@media screen and (max-width: 500px) {
+  .room__box {
+    padding-left: 2.5rem;
+    padding-right: 2rem;
+    height: 80.5vh;
+    overflow-y: auto;
+    padding-bottom: 0;
+  }
 }
 
 .room__info {
