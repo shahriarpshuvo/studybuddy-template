@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
 
 :root {
   --color-main: #71c6dd;
@@ -17,8 +17,8 @@
 /*========== base styles ==========*/
 
 * {
-  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
-    Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+    "Helvetica Neue", sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -143,7 +143,7 @@ a {
 }
 
 .avatar::after {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   background-color: var(--color-gray);
@@ -205,39 +205,40 @@ a {
   background-color: var(--color-gray);
 }
 
-.popup {
+.dropdown-menu {
   z-index: 111;
-  border: 1px solid rgba(0, 0, 0, 0.15);
   position: absolute;
-  top: 3rem;
+  top: 5rem;
   right: 0.5rem;
   background: var(--color-dark-light);
   border-radius: 5px;
   box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.15);
   overflow: hidden;
+  display: none;
 }
 
-.popup > * {
+.dropdown-menu.show {
+  display: block;
+}
+
+.dropdown-menu a {
   padding: 1.2rem 4rem;
   display: block;
-  color: var(--color-light);
+  color: var(--color-light) !important;
   font-weight: 500;
   font-size: 1.4rem;
 }
 
-.popup > *:hover {
+.dropdown-menu a:hover {
   background-color: var(--color-dark-medium);
 }
 
-.popup a {
-  border-bottom: 1px solid var(--color-gray);
+.dropdown-menu > a:not(:last-child) {
+  border-bottom: 1px solid var(--color-dark-medium);
 }
 
-.popup button {
-  cursor: pointer;
-  background: transparent;
-  border: none;
-  color: var(--color-light);
+.dropdown-menu a svg {
+  fill: var(--color-light);
 }
 
 /*==============================
@@ -254,7 +255,8 @@ a {
   gap: 9.5rem;
 }
 
-.header__logo {
+.header__logo,
+.header__user {
   display: flex;
   gap: 1rem;
   align-items: center;
@@ -296,6 +298,7 @@ a {
 
 .header__menu {
   margin-left: auto;
+  position: relative;
 }
 
 .header__menu a {
@@ -326,6 +329,17 @@ a {
   width: 1.6rem;
   height: 1.6rem;
   fill: var(--color-dark-light);
+}
+
+.dropdown-button {
+  background: transparent;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+}
+
+.dropdown-button:hover svg {
+  fill: var(--color-main);
 }
 
 /*==============================
@@ -675,6 +689,10 @@ a {
   margin-left: -4.2rem;
 }
 
+.roomListRoom__actions svg {
+  fill: var(--color-light-gray);
+}
+
 /*==============================
 =>  Create Room
 ================================*/
@@ -682,7 +700,6 @@ a {
 .create-room.layout .layout__box {
   max-width: 68rem;
 }
-
 
 /*==============================
 =>  Delete Item
@@ -818,10 +835,12 @@ a {
 }
 
 .room__topLeft svg {
+  width: 1.6rem;
+  height: 1.6rem;
   fill: var(--color-light);
 }
 
-.room__topRight{
+.room__topRight {
   display: flex;
   column-gap: 1em;
 }
@@ -829,14 +848,13 @@ a {
 .room__topRight svg {
   fill: var(--color-main-light);
 }
+
 .room__box {
   padding: 1rem 2rem;
-  position: relative;
-  height: 100%;
 }
 
 .room__header {
-  max-height: 42rem;
+  max-height: 25vh;
   overflow-y: auto;
 }
 
@@ -884,17 +902,20 @@ a {
 .room__conversation {
   margin-top: 1rem;
   margin-bottom: 2rem;
-  background: var(--color-bg);
-  border-radius: 0.7rem;
-  padding: 2rem;
-  max-height: 43rem;
-  overflow-y: auto;
 }
 
-.room__conversation h3 {
+.threads h3 {
   text-transform: uppercase;
   font-weight: 500;
   color: var(--color-gray);
+}
+
+.threads {
+  background: var(--color-bg);
+  border-radius: 0.7rem;
+  padding: 2rem;
+  overflow-y: auto;
+  max-height: 100%;
 }
 
 .thread {
@@ -934,26 +955,24 @@ a {
 /* .room__message {
   height: 10rem;
 } */
-.room__message > form {
-  position: absolute;
-  width: 100%;
-}
-
-.room__message > form > textarea {
+.room__message > form > input {
   resize: none;
   background-color: var(--color-dark-light);
   color: var(--color-light);
   border: none;
   outline: none;
   border-radius: 0.7rem;
-  height: 5rem;
-  width: calc(100% - 4rem);
-  padding: 1.5rem;
+  height: 4.5rem;
+  width: calc(100%);
+  margin-top: -1rem;
+  padding: 1.2rem;
   font-size: 1.4rem;
   font-weight: 500;
+  position: relative;
+  z-index: 111;
 }
 
-.room__message > form > textarea::placeholder {
+.room__message > form > input::placeholder {
   color: var(--color-light-gray);
 }
 
