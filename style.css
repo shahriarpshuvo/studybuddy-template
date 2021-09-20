@@ -1001,6 +1001,7 @@ a.mobile-search {
 @media screen and (max-width: 500px) {
   .room__header {
     top: 4.3rem;
+    padding-right: 2rem;
   }
 }
 
