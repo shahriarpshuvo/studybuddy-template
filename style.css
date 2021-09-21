@@ -396,6 +396,7 @@ a {
 .layout > .container {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
 }
 
 .layout--3 > .container > div:first-child {
@@ -603,13 +604,8 @@ a {
   border-bottom: 1px solid var(--color-dark-medium);
 }
 
-.topics-page .header__search {
-  display: none;
-}
-
 @media screen and (max-width: 500px) {
-  .mobile-menu .header__search,
-  .topics-page .header__search {
+  .mobile-menu .header__search {
     display: block;
     margin-bottom: 2.4rem;
   }
@@ -983,10 +979,10 @@ a {
 }
 
 .room__box {
-  padding-left: 2.3rem;
-  padding-right: 1.7rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   height: 80.5vh;
-  overflow-y: auto;
+  /* overflow-y: auto; */
   padding-bottom: 0;
 }
 
@@ -1044,6 +1040,7 @@ a {
 .room__conversation {
   margin-top: 1rem;
   margin-bottom: 4rem;
+  height: 64%;
 }
 
 .threads h3 {
@@ -1055,11 +1052,10 @@ a {
 .threads {
   background: var(--color-bg);
   border-radius: 0.7rem;
-  padding: 2rem;
   overflow-y: auto;
   height: 100%;
-  margin-top: 25vh;
-  padding-bottom: 0;
+  margin-top: 28vh;
+  padding: 0 2rem 4rem 2rem;
 }
 
 .thread {
