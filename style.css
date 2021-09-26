@@ -317,7 +317,7 @@ a {
   color: var(--color-light);
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
   .header__search input {
     width: 20rem;
   }
@@ -333,7 +333,7 @@ a {
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 520px) {
   .header__search {
     display: none;
   }
@@ -424,11 +424,10 @@ a {
 .layout__box {
   width: 90%;
   max-width: 48rem;
-  min-height: 40rem;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -46%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
   background-color: var(--color-dark);
   border-radius: 1rem;
   box-shadow: 1px 1px 6px 3px rgba(0, 0, 0, 0.1);
@@ -475,7 +474,7 @@ a {
 }
 
 /*==============================
-=>  Topics
+=>  Form
 ================================*/
 
 .form__group {
@@ -494,7 +493,7 @@ a {
   margin-bottom: 1rem;
 }
 
-.form__group input,
+.form__group input:not([type="checkbox"]),
 .form__group textarea,
 .form__group select {
   background: transparent;
@@ -514,7 +513,7 @@ a {
 
 .form__group textarea {
   background: transparent;
-  height: 10rem;
+  height: 7rem;
   resize: none;
 }
 
@@ -552,6 +551,72 @@ a {
   text-decoration: underline;
 }
 
+/*========== Checkbox ==========*/
+/* The container */
+.form__checkbox {
+  display: block;
+  position: relative;
+  padding-left: 3.6rem;
+  cursor: pointer;
+  font-size: 1.6rem;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+
+.form__checkbox label {
+  cursor: pointer;
+}
+.form__checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom checkbox */
+.form__checkbox .checkmark {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  width: 2rem;
+  background-color: transparent;
+  border-radius: 3px;
+  border: 2px solid var(--color-main);
+}
+
+/* On mouse-over, add a grey background color */
+.form__checkbox:hover input ~ .checkmark {
+  background-color: var(--color-main);
+}
+
+.form__checkbox input:checked ~ .checkmark {
+  background-color: var(--color-main);
+}
+
+.form__checkbox .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.form__checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.form__checkbox .checkmark:after {
+  left: 4px;
+  top: 0px;
+  width: 5px;
+  height: 10px;
+  border: solid var(--color-dark);
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
 /*==============================
 =>  Topics
 ================================*/
@@ -570,7 +635,7 @@ a {
   list-style: none;
 }
 
-.topics__list li a {
+.topics__list li {
   display: flex;
   justify-content: space-between;
   margin-bottom: 3rem;
@@ -579,18 +644,19 @@ a {
   transition: all 0.3s ease-in-out;
 }
 
-.topics__list li a.active,
-.topics__list li a:hover {
-  color: var(--color-main);
-}
-
-.topics__list li a span {
-  padding: 0.5rem 1rem;
-  background-color: var(--color-dark);
+.topics__list li a {
+  color: var(--color-bg);
+  padding: 0.3rem 0.8rem;
+  background-color: var(--color-main);
   border-radius: 3px;
   font-size: 1.3rem;
   font-weight: 700;
-  letter-spacing: 1px;
+}
+
+.topics__list li a.following {
+  color: var(--color-dark-light);
+  padding: 0.3rem 0;
+  background-color: var(--color-bg);
 }
 
 .topics-page a:hover {
@@ -608,7 +674,7 @@ a {
   display: block;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 520px) {
   .mobile-menu .header__search {
     display: block;
     margin-bottom: 2.4rem;
@@ -636,6 +702,57 @@ a {
 .roomList__header p {
   font-weight: 500;
   color: var(--color-dark-light);
+}
+
+/*========== Room List Room ==========*/
+.roomFilter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.4rem;
+  position: relative;
+}
+
+.roomFilter__line {
+  height: 1px;
+  width: 75%;
+  background-color: var(--color-dark-medium);
+}
+
+.roomFilter__button {
+  color: var(--color-dark-light);
+  font-size: 1.3rem;
+}
+
+.roomFilter__button:hover {
+  text-decoration: none;
+}
+
+.roomFilter__options {
+  display: none;
+  position: absolute;
+  flex-direction: column;
+  right: -1rem;
+  top: 3rem;
+  background-color: var(--color-dark-light);
+  z-index: 999;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.1);
+}
+
+.roomFilter__options a {
+  color: var(--color-light);
+  padding: 1rem 2.4rem;
+  font-size: 1.4rem;
+}
+
+.roomFilter__options a:hover {
+  background-color: var(--color-dark-medium);
+}
+
+.roomFilter__options.show {
+  display: flex;
 }
 
 /*========== Room List Room ==========*/
@@ -674,19 +791,17 @@ a {
 
 .roomListRoom__actions svg {
   fill: var(--color-main);
-
   width: 1.6rem;
   height: 1.6rem;
 }
 
 .roomListRoom__content {
-  margin: 1rem 0;
+  margin-bottom: 1rem;
 }
 
 .roomListRoom__content a {
   font-size: 2rem;
   font-weight: 500;
-  margin-bottom: 1.5rem;
   color: var(--color-light);
   transition: all 0.3s ease-in-out;
 }
@@ -703,7 +818,8 @@ a {
   justify-content: space-between;
 }
 
-.roomListRoom__joined {
+.roomListRoom__joined,
+.roomListRoom__topic {
   color: var(--color-light-gray);
   display: flex;
   align-items: center;
@@ -712,18 +828,34 @@ a {
   font-weight: 500;
 }
 
-.roomListRoom__joined svg {
+.roomListRoom__joined svg,
+.roomListRoom__topic svg {
   fill: var(--color-main);
   width: 1.6rem;
   height: 1.6rem;
 }
 
+.roomListRoom__metaLeft {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+/* 
 .roomListRoom__topic {
   padding: 5px 1.5rem;
-  background-color: var(--color-dark-medium);
   border-radius: 5rem;
   font-weight: 500;
   font-size: 1.3rem;
+}
+
+.roomListRoom__topic{
+  display: ;
+} */
+
+.roomListRoom__join {
+  font-size: 1.4rem;
+  padding: 0.5rem 1.2rem;
+  font-weight: 700;
 }
 
 /*==============================
@@ -849,6 +981,11 @@ a {
   margin: 1rem;
 }
 
+.settings__manage {
+  display: block;
+  margin-bottom: 3rem;
+}
+
 /*==============================
 =>  Profile
 ================================*/
@@ -871,9 +1008,15 @@ a {
 }
 
 .profile__info p {
-  color: var(--color-main);
+  color: var(--color-dark-light);
   font-weight: 500;
   margin-bottom: 1rem;
+}
+
+.profile__info .following {
+  background-color: var(--color-dark);
+  color: var(--color-light-gray);
+  border-color: var(--color-dark-medium);
 }
 
 .profile__about {
@@ -975,7 +1118,7 @@ a {
   padding-bottom: 1rem;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 520px) {
   .room__header {
     top: 4.3rem;
     padding-right: 2rem;
@@ -986,17 +1129,20 @@ a {
   padding-left: 2rem;
   padding-right: 2rem;
   height: 80.5vh;
-  /* overflow-y: auto; */
   padding-bottom: 0;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 520px) {
   .room__box {
     padding-left: 2.5rem;
     padding-right: 2rem;
     height: 80.5vh;
     overflow-y: auto;
     padding-bottom: 0;
+  }
+
+  .room__info p span {
+    display: none;
   }
 }
 
@@ -1009,6 +1155,14 @@ a {
   font-size: 2.4rem;
   font-weight: 500;
   color: var(--color-main);
+}
+
+.room__info p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  gap: 1rem;
 }
 
 .room__hosted p {
@@ -1162,4 +1316,18 @@ a {
   font-weight: 500;
   color: var(--color-main);
   font-weight: 1.4rem;
+}
+
+.interests > h3 {
+  margin-bottom: 3rem;
+}
+
+.interests__checkboxes {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.interests__checkboxes .form__checkbox {
+  flex-basis: 33.33%;
+  margin-bottom: 3rem;
 }

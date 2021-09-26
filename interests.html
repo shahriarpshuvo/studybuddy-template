@@ -60,49 +60,54 @@
                   ></path>
                 </svg>
               </a>
-              <h3>Settings</h3>
+              <h3>Interests</h3>
             </div>
           </div>
 
-          <div class="settings layout__body">
-            <div class="settings__avatar">
-              <div class="avatar avatar--large active">
-                <img src="assets/avatar.svg" id="preview-avatar" />
-              </div>
-            </div>
+          <div class="interests layout__body">
+            <h3>Add at least 3 Topics</h3>
             <form class="form" action="#">
-              <div class="form__group form__avatar">
-                <label for="avatar">Upload Avatar</label>
-                <input
-                  class="form__hide"
-                  required
-                  type="file"
-                  name="avatar"
-                  id="avatar"
-                  accept="image/png, image/gif, image/jpeg"
-                />
+              <div class="interests__checkboxes">
+                <div class="form__checkbox">
+                  <label for="topic#01">
+                    Django
+                    <input type="checkbox" id="topic#01" name="topics" class="chekebox" />
+                    <span class="checkmark"></span>
+                  </label>
+                </div>
+                <div class="form__checkbox">
+                  <label for="topic#02">
+                    JavaScript
+                    <input type="checkbox" id="topic#02" name="topics" class="chekebox" />
+                    <span class="checkmark"></span>
+                  </label>
+                </div>
+                <div class="form__checkbox">
+                  <label for="topic#03">
+                    React
+                    <input type="checkbox" id="topic#03" name="topics" class="chekebox" />
+                    <span class="checkmark"></span>
+                  </label>
+                </div>
+                <div class="form__checkbox">
+                  <label for="topic#04">
+                    Python
+                    <input type="checkbox" id="topic#04" name="topics" class="chekebox" />
+                    <span class="checkmark"></span>
+                  </label>
+                </div>
+                <div class="form__checkbox">
+                  <label for="topic#05">
+                    Data Structure
+                    <input type="checkbox" id="topic#05" name="topics" class="chekebox" />
+                    <span class="checkmark"></span>
+                  </label>
+                </div>
               </div>
-              <div class="form__group">
-                <label for="name">Full Name</label>
-                <input id="fullname" name="fullname" type="text" placeholder="e.g. Dennis Ivy" value="Dennis Ivy" />
-              </div>
-              <div class="form__group">
-                <label for="username">Username</label>
-                <input id="username" name="username" type="text" placeholder="e.g. @dennis_ivy" value="@dennis_ivy" />
-              </div>
-              <div class="form__group">
-                <label for="email">Email</label>
-                <input id="email" name="email" type="email" placeholder="e.g. user@domain.com" />
-              </div>
-              <div class="form__group">
-                <label for="about">About</label>
-                <textarea name="about" id="about" placeholder="Write about yourself..."></textarea>
-              </div>
-              <a href="#" class="btn btn--link settings__manage">Manage Interests</a>
 
               <div class="form__action">
-                <a class="btn btn--dark" href="profile.html">Cancel</a>
-                <button class="btn btn--main" type="submit">Update Settings</button>
+                <a class="btn btn--dark" href="profile.html">Skip</a>
+                <button class="btn btn--main" type="submit">Add Interest (3)</button>
               </div>
             </form>
           </div>

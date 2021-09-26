@@ -67,3 +67,11 @@ if (photoInput)
 // Scroll to Bottom
 const conversationThread = document.querySelector(".room__box");
 if (conversationThread) conversationThread.scrollTop = conversationThread.scrollHeight;
+
+// Filter
+const roomFilterButton = document.querySelector(".roomFilter__button");
+const roomFilterOptions = document.querySelector(".roomFilter__options");
+
+roomFilterButton.addEventListener("click", () => {
+  roomFilterOptions.classList.toggle("show");
+});
